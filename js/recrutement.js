@@ -44,6 +44,11 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                         value: formData.get("holland") || "Non renseigné",
                         inline: false,
                     },
+                    {
+                        name: "Pour débuter uen finalisation de candidature",
+                        value: `Merci d'utiliser la commande </recrutement:1390719168407670798>`,
+                        inline: false,
+                    },
                 ],
                 footer: {
                     text: "Formulaire automatisé",
