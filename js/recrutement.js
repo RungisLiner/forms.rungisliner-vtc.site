@@ -12,7 +12,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
             {
                 title: "📋 Détails du formulaire",
                 description: "Voici les réponses envoyées par l'utilisateur :",
-                color: 7208960,
+        color: "#6e0000",
                 fields: [
                     {
                         name: "Pseudo ?",
