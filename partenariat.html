@@ -100,46 +100,57 @@
               <div class="form-group">
                 <label for="pseudo">Pseudo discord:</label>
                 <span style="color: red;">*</span>
-                <input class="form-control" id="name" name="name" required="true" type="text"
+                <input class="form-control" id="pseudo" name="pseudo" required="true" type="text"
                   placeholder="Ex: Road Sanchez">
               </div>
               <div class="form-group">
                 <label for="iddiscord">ID discord:<br><img src="./images/iddiscordscreen.png"></label>
                 <span style="color: red;">*</span>
-                <input class="form-control" id="name" name="name" required="true" type="text"
+                <input class="form-control" id="iddiscord" name="iddiscord" required="true" type="text"
                   placeholder="Ex: 1188507004826812551">
               </div>
             </div>
             <div class="form-group">
-              <label for="discord">Votre age:</label>
+              <label for="discord">Nom de votre VTC:</label>
               <span style="color: red;">*</span>
-              <input class="form-control" id="age" name="age" required="true" type="number" min="1"
-                placeholder="Ex : 25">
+              <input class="form-control" id="namevtc" name="namevtc" required="true" type="text"
+                placeholder="Ex : Rungis Liner">
             </div>
             <div>
-              <label style="color: #000000" for="tmp">
-                <strong>Roulez vous sur TruckersMP ?</strong>
-                <span style="color: red;">*</span>
-              </label>
-
+            <div class="form-group">
+              <label for="age">Nombre de personne dans votre VTC ?</label>
+              <span style="color: red;">*</span>
+              <input class="form-control" id="numbercount" name="numbercount" required="true" type="number" min="1"
+                placeholder="Ex : 25">
+            </div>
               <div class="form-group">
-                <select class="styled-select" id="role" name="role" required="true">
-                  <option value="" disabled selected>Séléctionner ici:*</option>
-                  <option value="Role1">Oui</option>
-                  <option value="Role2">Non</option>
-                </select>
+                <label for="software">Lien de votre serveur discord:</label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="linkdiscord" name="linkdiscord" required="true" type="text"
+                  placeholder="Ex: https://discord.gg/XpDuUzfpxG">
               </div>
               <div class="form-group">
-                <label for="software">Utiliser vous des logiciels de livraisons ?<br>Si oui lequel ?</label>
+                <label for="holland">Lien de votre VTC TruckersMP:</label>
                 <span style="color: red;">*</span>
-                <input class="form-control" id="age" name="age" required="true" type="text"
-                  placeholder="Ex: Trucksbook, Trucky, VtLog, TruckersHub">
+                <input class="form-control" id="linktmp" name="linktmp" required="true" type="text"
+                  placeholder="Ex: https://truckersmp.com/vtc/78887">
               </div>
               <div class="form-group">
-                <label for="holland">Avez vous des connaissance sur le <strong>Holland Style</strong> ?</label>
+                <label for="holland">Lien de votre site internet:</label>
+                <input class="form-control" id="linkwebsite" name="linkwebsite" type="text"
+                  placeholder="Ex: https://rungisliner-vtc.site/">
+              </div>
+              <div class="form-group">
+                <label for="holland">Liste des gérant de votre VTC:</label>
                 <span style="color: red;">*</span>
-                <input class="form-control" id="age" name="age" required="true" type="text"
-                  placeholder="Merci de décrire vos connaissance...">
+                <input class="form-control" id="liststaff" name="liststaff" required="true" type="text"
+                  placeholder="Ex: Road Rider's TMP">
+              </div>
+              <div class="form-group">
+                <label for="holland">Pourquoi nous ?</label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="whyus" name="whyus" required="true" type="text"
+                  placeholder="Merci d'expliquer pourquoi nous...">
               </div>
               <button type="submit" class="btn btn-primary">Envoyer</button>
           </form>
