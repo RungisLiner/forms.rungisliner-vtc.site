@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questionnaire 1</title>
+  <link rel="stylesheet" href="./css/questionnaire.css" />
+  <link rel="stylesheet" href="./css/questionnaireresponsive.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/settings.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="header">
+        <nav class="nav-container">
+            <div id="sidenav">
+                <span id="closeSidenav">&times;</span>
+                <a href="https://rungisliner-vtc.site">Accueil site</a>
+                <a href="/">Accueil questionnaire</a>
+            </div>
+
+            <!-- Bouton Menu Mobile -->
+            <button id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="logo">
+                <div class="logo-circle">
+                    <img src="./images/RungisLiner.png" alt="RungisLiner">
+                </div>
+                Rungis Liner
+            </a>
+            <div class="nav-links">
+                <a href="https://rungisliner-vtc.site">Accueil site</a>
+                <a href="/">Accueil questionnaire</a>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay"></div>
+  <section class="contact" id="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Candidature spontanée</h2>
+        <p>Tu souhaites nous rejoindre ?<br>N'attend plus !<br></p>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form data-netlify="true" method="post" role="form">
+            <p style="text-align: center; color: #555;">Le formulaire est a remplir au complet.</p>
+            <input type="hidden" name="form-name" value="contact">
+            <div class="row">
+              <div class="form-group">
+                <label for="pseudo">Pseudo discord:</label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="pseudo" name="pseudo" required="true" type="text"
+                  placeholder="Ex: Road Sanchez">
+              </div>
+              <div class="form-group">
+                <label for="iddiscord">ID discord:<br><img src="./images/iddiscordscreen.png"></label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="iddiscord" name="iddiscord" required="true" type="text"
+                  placeholder="Ex: 1188507004826812551">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="age">Votre age:</label>
+              <span style="color: red;">*</span>
+                <input class="form-control" id="age" name="age" required="true" type="number" min="1"
+                placeholder="Ex : 25">
+            </div>
+            <div>
+              <label style="color: #000000" for="tmp">
+                <strong>Roulez vous sur TruckersMP ?</strong>
+                <span style="color: red;">*</span>
+              </label>
+
+              <div class="form-group">
+                <select class="styled-select" id="tmp" name="tmp" required="true">
+                  <option value="" disabled selected>Séléctionner ici:*</option>
+                  <option value="tmp1">Oui</option>
+                  <option value="tmp2">Non</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="software">Utiliser vous des logiciels de livraisons ?<br>Si oui lequel ?</label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="software" name="software" required="true" type="text"
+                placeholder="Ex: Trucksbook, Trucky, VtLog, TruckersHub">
+              </div>
+              <div class="form-group">
+                <label for="holland">Avez vous des connaissance sur le <strong>Holland Style</strong> ?</label>
+                <span style="color: red;">*</span>
+                <input class="form-control" id="holland" name="holland" required="true" type="text"
+                placeholder="Merci de décrire vos connaissance...">
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button data-open-settings
+        class="fixed bottom-4 left-4 bg-red-800 text-white p-3 rounded-lg shadow-lg z-50 text-2xl w-14 h-14 flex items-center justify-center">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Pop-up des paramètres -->
+    <div id="settings-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+        <div class="flex items-center justify-center">
+            <div class="modalsettings">
+                <!-- En-tête -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">
+                        Paramètres
+                    </h2>
+                    <button id="close-settings" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Corps du pop-up -->
+                <div class="space-y-6">
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-semibold">
+                            Langue
+                        </h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button data-lang="fr"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇫🇷 Français
+                            </button>
+                            <button data-lang="en"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇬🇧 English
+                            </button>
+                            <button data-lang="es"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇪🇸 Español
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay fixed inset-0 bg-black/50 z-30 hidden"></div>
+    </section>
+    <footer>
+        <p>2025 Rungis Liner développer par: <a href="https://github.com/roadsanchez"><strong>Road Sanchez</strong></a>
+        </p>
+        <div style="margin-top: 1rem;">
+            <a href="https://discord.gg/K4SNa827cr" style="color: white; margin: 0 10px;"><i
+                    class="fab fa-discord"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/animate.js"></script>
+    <script src="./js/recrutement.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

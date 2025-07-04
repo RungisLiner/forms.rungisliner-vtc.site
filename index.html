@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - Questionnaires</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/settings.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div id="sidenav">
+                <span id="closeSidenav">&times;</span>
+                <a href="https://rungisliner-vtc.site">Accueil site</a>
+                <a href="/">Accueil questionnaire</a>
+            </div>
+
+            <!-- Bouton Menu Mobile -->
+            <button id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="logo">
+                <div class="logo-circle">
+                    <img src="../images/RungisLiner.png" alt="RungisLiner">
+                </div>
+                Rungis Liner
+            </a>
+            <div class="nav-links">
+                <a href="/">Accueil</a>
+                <a href="/stats">Statistiques</a>
+                <a href="/contact">Contact</a>
+                <a href="/partnership">Partenariat</a>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay"></div>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Rungis Liner</h1>
+                <p class="hero-subtitle">
+                    L'entreprise que vous rechercher !
+                </p>
+                <a href="https://discord.gg/XpDuUzfpxG" target="_blank" class="cta-button">
+                    Nous rejoindre.
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main style="padding: 2rem; margin-top: -50px;">
+        <section class="card-container">
+            <div class="card">
+                <h2>Recrutement</h2>
+                <p>Cliquer ci-dessous pour candidater chez la Rungis Liner.</p>
+                <a href="recrutement.html" class="button"><span class="text">Commencer</span></a>
+            </div>
+            <div class="card">
+                <h2>Partenariat</h2>
+                <p>Vous souhaitez être en partenariat avec nous ?<br>Cliquez ci-dessous.</p>
+                <a href="partenariat.html" class="button"><span class="text">Commencer</span></a>
+            </div>
+            <div class="card">
+                <h2>Évenement</h2>
+                <p>Vous organiser un événement et vous souhaitez nous inviter ?<br>Cliquez ci-dessous.</p>
+                <a href="events.html" class="button"><span class="text">Commencer</span></a>
+            </div>
+        </section>
+    </main>
+    <button data-open-settings
+        class="fixed bottom-4 left-4 bg-red-800 text-white p-3 rounded-lg shadow-lg z-50 text-2xl w-14 h-14 flex items-center justify-center">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Pop-up des paramètres -->
+    <div id="settings-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+        <div class="flex items-center justify-center">
+            <div class="modalsettings">
+                <!-- En-tête -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">
+                        Paramètres
+                    </h2>
+                    <button id="close-settings" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Corps du pop-up -->
+                <div class="space-y-6">
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-semibold">
+                            Langue
+                        </h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button data-lang="fr"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇫🇷 Français
+                            </button>
+                            <button data-lang="en"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇬🇧 English
+                            </button>
+                            <button data-lang="es"
+                                class="lang-selector bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
+                                🇪🇸 Español
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay fixed inset-0 bg-black/50 z-30 hidden"></div>
+    </section>
+    <footer>
+        <p>2025 Rungis Liner développer par: <a href="https://github.com/roadsanchez"><strong>Road Sanchez</strong></a>
+        </p>
+        <div style="margin-top: 1rem;">
+            <a href="https://discord.gg/K4SNa827cr" style="color: white; margin: 0 10px;"><i
+                    class="fab fa-discord"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/animate.js"></script>
+    <script src="./js/candidate.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

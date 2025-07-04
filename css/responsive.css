@@ -1,0 +1,255 @@
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5%;
+        position: relative;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        padding: 4rem 5%;
+        background: white;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+        color: var(--accent-color);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+}
+
+/* Version PC (> 768px) */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    #settings-modal > div {
+        right: 1rem;
+        left: auto;
+        transform-origin: bottom right;
+        margin: 0;
+        position: fixed;
+        bottom: 1rem;
+        top: auto;
+        width: 95%;
+        height: auto;
+        max-height: 90vh;
+        animation: modalEntryMobile 0.3s ease-out;
+    }
+
+    @keyframes modalEntryMobile {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+/* Version desktop */
+@media (min-width: 769px) {
+    #settings-modal > div {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+#menuToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, #6e0000, #000000); /* Dégradé dynamique */
+    color: white;
+    padding: 16px;
+    border-radius: 50%; /* Bord arrondi */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Ombre 3D */
+    font-size: 2rem;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Transition fluide pour les interactions */
+    z-index: 100;
+}
+
+/* Effet au survol (agrandissement et ombre) */
+#menuToggle:hover {
+    transform: translateY(-5px); /* Décalage vers le haut */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Ombre renforcée */
+}
+
+/* Effet au clic (pression) */
+#menuToggle:active {
+    transform: translateY(2px); /* Effet de pression */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Sidenav (menu latéral) */
+#sidenav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Masqué sur la gauche */
+    width: 250px;
+    height: 100%;
+    background-color: #70000083; /* Couleur de fond sombre */
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 50;
+}
+
+/* Liens de la sidenav */
+#sidenav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Changement de couleur au survol des liens */
+#sidenav a:hover {
+    background-color: #4c51bf;
+    color: white;
+}
+
+/* Fermeture de la sidenav (bouton) */
+#closeSidenav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Pour cacher le bouton sur les écrans moyens et plus */
+@media screen and (min-width: 768px) {
+    #menuToggle {
+        display: none;
+    }
+}
+
+/* Bouton principal */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background-color: #ffffff;
+  border: 8px solid #6e0000;
+  color: rgb(0, 0, 0);
+  gap: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+/* Texte du bouton */
+.button .text {
+  font-size: 1.7em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Icône SVG */
+.button .svg {
+  padding-top: 5px;
+  width: fit-content;
+  height: 100%;
+}
+
+.button .svg svg {
+  width: 50px;
+  height: 30px;
+}
+
+/* Hover */
+.button:hover {
+  border: 8px solid #000000;
+  background-color: #6e0000;
+  color: rgb(255, 255, 255);
+}
+
+.button:hover .svg svg {
+  animation: jello-vertical 0.9s both;
+  transform-origin: left;
+}
+
+/* Active */
+.button:active {
+  border: 5px solid #c0dfff;
+  color: rgb(255, 255, 255);
+}
+
+/* Animation */
+@keyframes jello-vertical {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(0.75, 1.25, 1); }
+  40% { transform: scale3d(1.25, 0.75, 1); }
+  50% { transform: scale3d(0.85, 1.15, 1); }
+  65% { transform: scale3d(1.05, 0.95, 1); }
+  75% { transform: scale3d(0.95, 1.05, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .button {
+    padding: 16px 64px;
+    font-size: 1rem;
+    border: 5px solid #6e0000;
+  }
+
+  .button .text {
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+  }
+
+  .button .svg svg {
+    width: 30px;
+    height: 20px;
+  }
+}
