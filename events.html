@@ -88,8 +88,8 @@
   <section class="contact" id="contact">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
-        <h2>Candidature spontanée</h2>
-        <p>Tu souhaites nous rejoindre ?<br>N'attend plus !<br></p>
+        <h2>Invitation événement</h2>
+        <p>Tu souhaites nous inviter ?<br>N'attend plus !<br></p>
       </div>
       <div class="row">
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -98,50 +98,73 @@
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
               <div class="form-group">
-                <label for="pseudo">Pseudo discord:</label>
-                <span style="color: red;">*</span>
-                <input class="form-control" id="name" name="name" required="true" type="text"
-                  placeholder="Ex: Road Sanchez">
+                <label for="iddiscord">ID discord de la personne a contacter:<span style="color: red;">*</span><br><img
+                    src="./images/iddiscordscreen.png"></label>
+                <input class="form-control" id="iddiscord" name="iddiscord" required="true" type="text"
+                  placeholder="Ex: 1188507004826812551">
               </div>
               <div class="form-group">
-                <label for="iddiscord">ID discord:<br><img src="./images/iddiscordscreen.png"></label>
-                <span style="color: red;">*</span>
-                <input class="form-control" id="name" name="name" required="true" type="text"
-                  placeholder="Ex: 1188507004826812551">
+                <label for="pseudo">Nom de l'événement:<span style="color: red;">*</span></label>
+                <input class="form-control" id="nameevents" name="nameevents" required="true" type="text"
+                  placeholder="Ex: Events 2 years VTC">
               </div>
             </div>
             <div class="form-group">
-              <label for="discord">Votre age:</label>
-              <span style="color: red;">*</span>
-              <input class="form-control" id="age" name="age" required="true" type="number" min="1"
-                placeholder="Ex : 25">
+              <label for="discord">Date de l'événement + heure de rendez-vous:<span style="color: red;">*</span></label
+              <input class="form-control" id="datehourevents" name="datehourevents" required="true" required="true" type="text"
+                placeholder="Ex : 12/05/2025 | 21:00">
             </div>
             <div>
               <label style="color: #000000" for="tmp">
-                <strong>Roulez vous sur TruckersMP ?</strong>
-                <span style="color: red;">*</span>
+                <strong>Serveur TruckersMP:<span style="color: red;">*</span></strong>
               </label>
-
               <div class="form-group">
-                <select class="styled-select" id="role" name="role" required="true">
+                <select class="styled-select" id="server" name="server" required="true">
                   <option value="" disabled selected>Séléctionner ici:*</option>
-                  <option value="Role1">Oui</option>
-                  <option value="Role2">Non</option>
+                  <option value="Simulation 1">Simulation 1</option>
+                  <option value="Simulation 2">Simulation 2</option>
+                  <option value="[US] Simulatio">[US] Simulation</option>
+                  <option value="[Asia] Simulation">[Asia] Simulation</option>
+                  <option value="Arcade">Arcade</option>
+                  <option value="ProMods">ProMods</option>
+                  <option value="ProMods Arcade">ProMods Arcade</option>
+                  <option value="Serveur Évenement">Serveur Évenement</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="software">Utiliser vous des logiciels de livraisons ?<br>Si oui lequel ?</label>
-                <span style="color: red;">*</span>
-                <input class="form-control" id="age" name="age" required="true" type="text"
-                  placeholder="Ex: Trucksbook, Trucky, VtLog, TruckersHub">
+                <label for="software">Distance:<span style="color: red;">*</span></label>
+                <input class="form-control" id="distanceevents" name="distanceevents" required="true" type="text"
+                  placeholder="Ex: ~1,025km">
               </div>
               <div class="form-group">
-                <label for="holland">Avez vous des connaissance sur le <strong>Holland Style</strong> ?</label>
-                <span style="color: red;">*</span>
-                <input class="form-control" id="age" name="age" required="true" type="text"
-                  placeholder="Merci de décrire vos connaissance...">
+                <label for="holland">Ville de départ:<span style="color: red;">*</span></label>
+                <input class="form-control" id="citydeparture" name="citydeparture" required="true" type="text"
+                  placeholder="Brest">
               </div>
-              <button type="submit" class="btn btn-primary">Envoyer</button>
+              <div class="form-group">
+                <label for="holland">Ville d'arrivée:<span style="color: red;">*</span></label>
+                <input class="form-control" id="cityarrival" name="cityarrival" required="true" type="text"
+                  placeholder="Bruxelles">
+              </div>
+              <div class="form-group">
+                <label for="holland">DLC ?<span style="color: red;">*</span></label>
+                </label>
+                <div class="form-group">
+                  <select class="styled-select" id="dlc" name="dlc" required="true">
+                    <option value="" disabled selected>Séléctionner ici:*</option>
+                    <option value="Greece">Greece</option>
+                    <option value="West Balkans">West Balkans</option>
+                    <option value="Iberia">Iberia</option>
+                    <option value="Road to the Black Sea">Road to the Black Sea</option>
+                    <option value="Beyond the Baltic Sea">Beyond the Baltic Sea</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Vive la France !">Vive la France !</option>
+                    <option value="Scandinavia">Scandinavia</option>
+                    <option value="Going East!">Going East!</option>
+                    <option value="Aucun">Aucun</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
           </form>
         </div>
       </div>

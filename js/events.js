@@ -2,12 +2,12 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
 
     const formData = new FormData(e.target); // Récupère les données du formulaire
-    const webhookURL = "https://discord.com/api/webhooks/1390447197300064508/eNoOeFF2SMu7-kO3GpuIIl9FbZLcXwB6RLQijVlmQjhXybkNZ5XLDTA6lt_lX18j-tXJ"; // Remplacez par votre Webhook Discord
+    const webhookURL = "https://discord.com/api/webhooks/1390845010542592131/eDaj1SEkD_ldnIUv9iODHwddspn979Pbn50VKeD3qA5ypr7r6P0uotNw0OAjtOxf6HFh"; // Remplacez par votre Webhook Discord
 
     const data = {
         username: 'Ruиgis Liиεr | εvεиt',
         avatar_url: 'https://imgur.com/8TbYZfq.png',
-        content: "<@&1257843243174068243>\n- 📩 **Un nouveau formulaire a été soumis !**",
+        content: "<@&1358962788969480242>\n- 📩 **Un nouveau formulaire a été soumis !**",
         embeds: [
             {
                 title: "📋 Détails du formulaire",
@@ -15,38 +15,43 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                 color: 116e0000,
                 fields: [
                     {
-                        name: "Prénom",
-                        value: formData.get("name") || "Non renseigné",
+                        name: "ID Discord ?",
+                        value: formData.get("iddiscord") || "Non renseigné",
                         inline: true,
                     },
                     {
-                        name: "Âge",
-                        value: formData.get("age") || "Non renseigné",
+                        name: "Nom de l'événement",
+                        value: formData.get("nameevents") || "Non renseigné",
                         inline: true,
                     },
                     {
-                        name: "Pseudo Discord",
-                        value: formData.get("discord") || "Non renseigné",
+                        name: "Date + Heure",
+                        value: formData.get("datehourevents") || "Non renseigné",
                         inline: false,
                     },
                     {
-                        name: "Date d'arrivée",
-                        value: formData.get("skills") || "Non renseigné",
+                        name: "Serveur",
+                        value: formData.get("server") || "Non renseigné",
                         inline: false,
                     },
                     {
-                        name: "Rôle demandé",
-                        value: formData.get("project_interest") || "Non renseigné",
+                        name: "Distance:",
+                        value: formData.get("distanceevents") || "Non renseigné",
                         inline: false,
                     },
                     {
-                        name: "Disponibilité",
-                        value: formData.get("availability") || "Non renseigné",
+                        name: "Ville de départ:",
+                        value: formData.get("citydeparture") || "Non renseigné",
                         inline: false,
                     },
                     {
-                        name: "Objectifs personnels/professionnels",
-                        value: formData.get("goals") || "Non renseigné",
+                        name: "Ville d'arrivée:",
+                        value: formData.get("cityarrival") || "Non renseigné",
+                        inline: false,
+                    },
+                    {
+                        name: "DLC ?",
+                        value: formData.get("dlc") || "Non renseigné",
                         inline: false,
                     },
                 ],
