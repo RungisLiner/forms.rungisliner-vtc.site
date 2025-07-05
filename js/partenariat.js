@@ -49,6 +49,11 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                         value: formData.get("whyus") || "Non renseigné",
                         inline: false,
                     },
+                    {
+                        name: "Pour une proposition d'un partenariat",
+                        value: `Merci d'utiliser la commande </forms partner:1391103874592669797>`,
+                        inline: false,
+                    },
                 ],
                 footer: {
                     text: "Formulaire automatisé",
