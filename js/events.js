@@ -54,6 +54,11 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                         value: formData.get("dlc") || "Non renseigné",
                         inline: false,
                     },
+                    {
+                        name: "Pour des renseignements supplémentaires",
+                        value: `Merci d'utiliser la commande </forms evenements:1391103874592669797>`,
+                        inline: false,
+                    },
                 ],
                 footer: {
                     text: "Formulaire automatisé",

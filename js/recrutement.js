@@ -45,8 +45,8 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                         inline: false,
                     },
                     {
-                        name: "Pour débuter uen finalisation de candidature",
-                        value: `Merci d'utiliser la commande </recrutement:1390719168407670798>`,
+                        name: "Pour finaliser une candidature",
+                        value: `Merci d'utiliser la commande </forms recrutement:1391103874592669797>`,
                         inline: false,
                     },
                 ],
