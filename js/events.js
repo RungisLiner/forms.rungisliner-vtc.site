@@ -71,7 +71,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         });
 
         if (response.ok) {
-            alert("✅ Formulaire envoyé avec succès à Discord !");
+            alert("✅ Formulaire envoyé, nous vous invitons tout de même a rejoindre notre serveur !\nSans cela, nous ne pouvons pas donner suite a votre invitation !");
             e.target.reset();
         } else {
             alert("❌ Une erreur s'est produite lors de l'envoi du formulaire.");
