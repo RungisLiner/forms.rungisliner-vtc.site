@@ -12,7 +12,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
             {
                 title: "📋 Détails du formulaire",
                 description: "Voici les réponses envoyées par l'utilisateur :",
-                color: 116e0000,
+                color: 7208960,
                 fields: [
                     {
                         name: "ID Discord ?",
